@@ -7,16 +7,23 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.stacklayout import StackLayout
 from kivy.uix.widget import Widget
 
+
+class LayoutAssignment(BoxLayout):
+    pass
+
+
 class GridLayoutExample(GridLayout):
     pass
+
 
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.orientation = "lr-tb"
         for letter in "abcdefghijklmnopqrstuvwxyz":
-            b = Button(text=f"Button {letter}",size_hint=(.2,.2))
+            b = Button(text=f"Button {letter}", size_hint=(.2, .2))
             self.add_widget(b)
+
 
 class BoxLayoutExample(BoxLayout):
     pass
@@ -25,7 +32,9 @@ class BoxLayoutExample(BoxLayout):
 class MainWidget(Widget):
     pass
 
+
 class WidgetLayoutApp(App):
     pass
+
 
 WidgetLayoutApp().run()
